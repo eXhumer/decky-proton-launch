@@ -1,0 +1,18 @@
+# VSCode Workspace directories
+/.vscode/
+
+# Frontend dependencies
+/node_modules/
+
+# Backend binaries
+/backend/out/
+/backend/target/
+
+# Output plugin
+/out/
+
+# Decky CLI application
+/cli/
+
+# macOS stuff
+/.DS_Store

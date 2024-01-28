@@ -1,0 +1,14 @@
+{
+    "name": "Proton Launch",
+    "author": "eXhumer",
+    "flags": [
+      "debug"
+    ],
+    "publish": {
+      "tags": [
+        "proton",
+        "wine"
+      ],
+      "description": "A decky plugin to manage Proton runtime options"
+    }
+  }
