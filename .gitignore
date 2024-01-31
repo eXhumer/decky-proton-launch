@@ -8,6 +8,9 @@
 /backend/out/
 /backend/target/
 
+# Rollup output
+/dist/
+
 # Output plugin
 /out/
 
