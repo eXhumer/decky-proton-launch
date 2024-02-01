@@ -7,6 +7,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          submodules: true
 
       - name: Setup latest Node.js
         uses: actions/setup-node@v4
@@ -34,7 +36,7 @@ jobs:
 
       - name: Build plugin
         run: |
-          $(pwd)/cli/decky plugin build $(pwd)
+          $(pwd)/cli/decky plugin build $(pwd) --build-as-root
           unzip out/Proton\ Launch.zip -d out/Proton\ Launch
 
       - name: Set outputs
