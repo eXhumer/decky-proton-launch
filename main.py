@@ -1,8 +1,9 @@
 from asyncio import sleep
 from subprocess import Popen
+from sys import version_info as python_version
 from typing import Type, Union
 
-from decky_plugin import DECKY_PLUGIN_DIR
+from decky_plugin import DECKY_PLUGIN_DIR, logger
 
 
 class Plugin:
@@ -18,6 +19,11 @@ class Plugin:
         """
         Plugin entry hook.
         """
+
+        logger.debug("Backend Python Version: " +
+                     f"{python_version.major}.{python_version.minor}")
+
+        logger.info("Starting backend process...")
 
         cls.BACKEND_PROC = Popen([cls.BACKEND_PATH])
 
